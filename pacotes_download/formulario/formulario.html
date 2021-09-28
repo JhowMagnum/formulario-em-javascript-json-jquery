@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS_ Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!--JS_Bootstrap-->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <!--Script-->
+	
+
+    <title>Página de formulário</title>
+</head>
+
+<bodyid="body" style="background-color: rgb(221, 221, 221);">
+    <header>Formulário promocional</header>
+
+    <br>
+
+	<form id="frm" class="container p-3 border shadow" style="background-color: rgb(255, 255, 255);" name="frm" method="get" Onsubmit="verificar_dados()">
+	 <h1 class="text-center badge-dark ">Formulário</h1> 
+
+
+    Nome:
+    <input name="nome" id="nome" type="text" placeholder="Nome Sobrenome"  minlength="3" maxlength="15">
+    <br><br>
+
+    Apelido:
+    <input name="nickname" id="nickname" type="text"  minlength="3" maxlength="10">
+    <br><br>
+
+    Data de nascimento:
+    <input name="dia" id="dia" type="date">
+    <!--<input name="mes" id="mes"  type="date" maxlength="2">/
+    <input name="ano" id="ano" type="number" maxlength="4">-->
+    <br>
+	<br>
+
+    CPF:
+    <input name="cpf" id="cpf" type="number" class="cpf col-md-4" placeholder="Somente números" maxlength="14">
+    <small id="emailHelp" class="m-0 form-text text-muted">Nunca vamos compartilhar seu CPF, com ninguém.</small>
+        
+    <br><br>
+
+    Time do coração:
+    <select id="team_id" class="team_id mb-2" maxlength="20">
+        <option id="time1">Corinthians</option>
+        <option id="time2">Palmeiras</option>
+        <option id="time3">São Paulo</option>
+        <option id="time4">Barcelona</option>
+        <option id="time5">Bayern</option>
+    </select>
+    <br><br>
+
+    Esportes de interesse:<br>
+    <input type="checkbox" name="sport" id="spo1" value="Futebol">Futebol<br>
+    <input type="checkbox" name="sport" id="spo2" value="Volei">Vôlei<br>
+    <input type="checkbox" name="sport" id="spo3" value="Basquete">Basquete<br>
+    <input type="checkbox" name="sport" id="spo4" value="Futsal">Futsal<br>
+    <input type="checkbox" name="sport" id="spo5" value="Automo">Automobilismo<br>
+    <input type="checkbox" name="sport" id="spo6" value="artesm">Artes marciais<br>
+    <input type="checkbox" name="sport" id="spo7" value="natacao">Natação<br>
+    <br>
+    <button type="submit" Onclick="verificar_dados()" >Enviar</button>
+    <button type="reset">Cancelar</button>
+	
+	<br>
+		
+	</form>
+
+	<script src="_javascript/funcoes.js"></script>
+	<script charset="ISO-8859-1" src="./_javascript/arquivo_JSON.js"></script>
+	<script charset="ISO-8859-1" src="./_javascript/validacao_Data_Esporte.js"></script>
+	<script charset="ISO-8859-1" src="./_javascript/verificar_dados.js"></script>
+	
+	
+</body>
+
+</html>
